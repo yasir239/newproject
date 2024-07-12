@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comment List</title>
+</head>
+<body>
+    <h1>Comment List</h1>
+    <ul>
+        {% for comment in comments %}
+        <li>
+            <p><strong>User:</strong> {{ comment.user.username }}</p>
+            <p>{{ comment.content }}</p>
+            <p><strong>Date Posted:</strong> {{ comment.date_posted }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
